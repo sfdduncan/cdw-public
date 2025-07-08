@@ -68,11 +68,11 @@
     <!-- This div displays the main project title -->
     <!-- class="project-title" allows us to style this with CSS -->
     
-    <div class="project-subtitle">Student Name</div>
+    <div class="project-subtitle">Steven Duncan</div>
     <!-- This div displays the student's name as a subtitle -->
     <!-- class="project-subtitle" allows us to style this with CSS -->
     
-    <div class="advisor">Advisor Name</div>
+    <div class="advisor">Catherine Griffiths</div>
     <!-- This div displays advisor information -->
     <!-- <br> creates a line break -->
     <!-- <strong> makes the text bold for emphasis -->
@@ -88,40 +88,35 @@
 
     <!-- ADD A NEW 'CANVAS CONTAINER' FOR EACH NEW THREE.JS SKETCH (THE ORDER IS DEFINED BY THE CONTAINER NUMBER BELOW + THE MOST RECENT SKETCH SHOULD BE AT THE TOP) -->
 
-    <!-- Section for first Three.js sketch (3d-primitives.js) -->
-    <div class="section-title">3D Primitives with Rotating Box</div>
-    <p>A simple Three.js scene featuring a rotating box on a wireframe grid with ambient and directional lighting.</p>
-    
-    <!-- Canvas container for first Three.js sketch (3d-primitives.js) -->
-    <div id="threejs-container-1"></div>
-  
-    <!-- Section for second Three.js sketch (orbit-camera.js) --> 
-    <div class="section-title">Interactive 3D Scene with Orbit Controls</div>
-    <p>An interactive Three.js scene with multiple 3D primitives (box, sphere, cylinder, cone) and orbit camera controls for navigation.</p>
-    
-    <!-- Canvas container for second Three.js sketch (orbit-camera.js) --> 
-    <div id="threejs-container-2"></div>
-
-    <!-- Section for third Three.js sketch (orbit-camera.js) --> 
-    <div class="section-title">Atmospheric Geomteries</div>
-    <p>An interactive Three.js scene with multiple 3D primitives (box, sphere, cylinder, cone) and orbit camera controls for navigation.</p>
-    
-    <!-- Canvas container for second Three.js sketch (orbit-camera.js) --> 
-    <div id="threejs-container-3"></div>
+    <!-- Fullscreen 3D Model Viewer -->
+    <div class="section-title">3D Model Viewer</div>
+    <p>This section displays the <code>vaporwave_tokyo_sketchfab_3d_editor_challenge.glb</code> model loaded with Three.js and OrbitControls. Make sure this file is present in the <code>Examples</code> directory.</p>
+    <div id="threejs-container-4" style="width:100vw; height:100vh; position:fixed; top:0; left:0; z-index:10; background:transparent;"></div>
  
     <!-- ------------------------------------------------------------ -->
     
   </main>
   <!-- End of main content area -->
-  
+
+  <style>
+    body {
+      background: #aeefff !important;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    #threejs-container-4 canvas {
+      background: transparent !important;
+    }
+  </style>
+
 
   <!-- ------------------------------------------------------------ -->
 
-  <!-- LOAD EACH NEW THREE.JS SCRIPT HERE -->
-
-  <script src="3d-primitive.js"></script>
-  <script src="orbit-camera.js"></script>
-  <script src="atmospheric-geometry.js"></script>
+  <!-- Load GLTFLoader for model-viewer.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="model-viewer.js"></script>
 
   <!-- ------------------------------------------------------------ -->
 
